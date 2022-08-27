@@ -21,16 +21,9 @@ namespace HealthBars
         private const string IGNORE_FILE = "IgnoredEntities.txt";
         private List<string> IgnoredSum;
 
-        private List<string> Ignored = new List<string>
+        private readonly List<string> Ignored = new List<string>
         {
-            "Metadata/Monsters/Daemon/SilverPoolChillDaemon",
-            "Metadata/Monsters/Daemon",
-            "Metadata/Monsters/Frog/FrogGod/SilverOrb",
-            "Metadata/Monsters/Frog/FrogGod/SilverPool",
-            "Metadata/Monsters/Labyrinth/GoddessOfJusticeMapBoss@7",
-            "Metadata/Monsters/Labyrinth/GoddessOfJustice@",
-            "Metadata/Monsters/LeagueBetrayal/MasterNinjaCop",
-            //Delirium Ignores
+            // Delirium Ignores
             "Metadata/Monsters/LeagueAffliction/DoodadDaemons/DoodadDaemonEyes1",
             "Metadata/Monsters/LeagueAffliction/DoodadDaemons/DoodadDaemonEyes2",
             "Metadata/Monsters/LeagueAffliction/DoodadDaemons/DoodadDaemonEyes3",
@@ -44,9 +37,73 @@ namespace HealthBars
             "Metadata/Monsters/LeagueAffliction/DoodadDaemons/DoodadDaemonGoatFillet2Vanish",
             "Metadata/Monsters/LeagueAffliction/DoodadDaemons/DoodadDaemonGoatRhoa1Vanish",
             "Metadata/Monsters/LeagueAffliction/DoodadDaemons/DoodadDaemonGoatRhoa2Vanish",
-            "Metadata/Monsters/InvisibleFire/InvisibleFireAfflictionCorpseDegen",
+            
+            // Conquerors Ignores
+            "Metadata/Monsters/AtlasExiles/AtlasExile1@",
+            "Metadata/Monsters/AtlasExiles/CrusaderInfluenceMonsters/CrusaderArcaneRune",
+            "Metadata/Monsters/AtlasExiles/AtlasExile2_",
+            "Metadata/Monsters/AtlasExiles/EyrieInfluenceMonsters/EyrieFrostnadoDaemon",
+            "Metadata/Monsters/AtlasExiles/AtlasExile3@",
+            "Metadata/Monsters/AtlasExiles/AtlasExile3AcidPitDaemon",
+            "Metadata/Monsters/AtlasExiles/AtlasExile3BurrowingViperMelee",
+            "Metadata/Monsters/AtlasExiles/AtlasExile3BurrowingViperRanged",
+            "Metadata/Monsters/AtlasExiles/AtlasExile4@",
+            "Metadata/Monsters/AtlasExiles/AtlasExile4ApparitionCascade",
+            "Metadata/Monsters/AtlasExiles/AtlasExile5Apparition",
+            "Metadata/Monsters/AtlasExiles/AtlasExile5Throne",
+
+            // Incursion Ignores
+            "Metadata/Monsters/LeagueIncursion/VaalSaucerRoomTurret",
+            "Metadata/Monsters/LeagueIncursion/VaalSaucerTurret",
+            "Metadata/Monsters/LeagueIncursion/VaalSaucerTurret",
+            
+            // Betrayal Ignores
+            "Metadata/Monsters/LeagueBetrayal/BetrayalTaserNet",
+            "Metadata/Monsters/LeagueBetrayal/FortTurret/FortTurret1Safehouse",
+            "Metadata/Monsters/LeagueBetrayal/FortTurret/FortTurret1",
+            "Metadata/Monsters/LeagueBetrayal/MasterNinjaCop",
+            
+            // Legion Ignores
+            "Metadata/Monsters/LegionLeague/LegionVaalGeneralProjectileDaemon",
+            "Metadata/Monsters/LegionLeague/LegionSergeantStampedeDaemon",
+            "Metadata/Monsters/LegionLeague/LegionSandTornadoDaemon",
+
+            // Random Ignores
+            "Metadata/Monsters/InvisibleFire/InvisibleSandstorm_",
+            "Metadata/Monsters/InvisibleFire/InvisibleFrostnado",
+            "Metadata/Monsters/InvisibleFire/InvisibleFireAfflictionDemonColdDegen",
             "Metadata/Monsters/InvisibleFire/InvisibleFireAfflictionDemonColdDegenUnique",
-            "Metadata/Monsters/VolatileCore/VolatileDeadCore",
+            "Metadata/Monsters/InvisibleFire/InvisibleFireAfflictionCorpseDegen",
+            "Metadata/Monsters/InvisibleFire/InvisibleFireEyrieHurricane",
+            "Metadata/Monsters/InvisibleFire/InvisibleIonCannonFrost",
+            "Metadata/Monsters/InvisibleFire/AfflictionBossFinalDeathZone",
+
+            "Metadata/Monsters/InvisibleCurse/InvisibleFrostbiteStationary",
+            "Metadata/Monsters/InvisibleCurse/InvisibleConductivityStationary",
+            "Metadata/Monsters/InvisibleCurse/InvisibleEnfeeble",
+
+            "Metadata/Monsters/InvisibleAura/InvisibleWrathStationary",
+
+            "Metadata/Monsters/LeagueSynthesis/SynthesisDroneBossTurret1",
+            "Metadata/Monsters/LeagueSynthesis/SynthesisDroneBossTurret2",
+            "Metadata/Monsters/LeagueSynthesis/SynthesisDroneBossTurret3",
+            "Metadata/Monsters/LeagueSynthesis/SynthesisDroneBossTurret4",
+
+            "Metadata/Monsters/LeagueBestiary/RootSpiderBestiaryAmbush",
+            "Metadata/Monsters/LeagueBestiary/BlackScorpionBestiaryBurrowTornado",
+
+            // "Metadata/Monsters/Labyrinth/GoddessOfJustice",
+            // "Metadata/Monsters/Labyrinth/GoddessOfJusticeMapBoss",
+            "Metadata/Monsters/Frog/FrogGod/SilverOrb",
+            "Metadata/Monsters/Frog/FrogGod/SilverPool",
+            "Metadata/Monsters/LunarisSolaris/SolarisCelestialFormAmbushUniqueMap",
+            "Metadata/Monsters/Invisible/MaligaroSoulInvisibleBladeVortex",
+            "Metadata/Monsters/Daemon",
+            "Metadata/Monsters/Daemon/MaligaroBladeVortexDaemon",
+            "Metadata/Monsters/Daemon/SilverPoolChillDaemon",
+            "Metadata/Monsters/AvariusCasticus/AvariusCasticusStatue",
+            "Metadata/Effects/PermanentServerEffect",
+            "Metadata/Monsters/LeagueUltimatum/Daemon/UltimatumDaemon"
         };
 
         private IngameUIElements ingameUI;
@@ -54,7 +111,6 @@ namespace HealthBars
         private Vector2 oldplayerCord;
         private Entity Player;
         private HealthBar PlayerBar;
-        private double time;
         private RectangleF windowRectangle;
         private Size2F windowSize;
 
@@ -83,7 +139,7 @@ namespace HealthBars
                 windowSize = new Size2F(windowRectangle.Width / 2560, windowRectangle.Height / 1600);
                 camera = GameController.Game.IngameState.Camera;
 
-                return ingameUI.SyndicatePanel.IsVisibleLocal || ingameUI.SellWindow.IsVisibleLocal ||
+                return ingameUI.BetrayalWindow.IsVisibleLocal || ingameUI.SellWindow.IsVisibleLocal ||
                        ingameUI.DelveWindow.IsVisibleLocal || ingameUI.IncursionWindow.IsVisibleLocal ||
                        ingameUI.UnveilWindow.IsVisibleLocal || ingameUI.TreePanel.IsVisibleLocal || ingameUI.Atlas.IsVisibleLocal ||
                        ingameUI.CraftBench.IsVisibleLocal;
@@ -147,54 +203,32 @@ namespace HealthBars
             ReadIgnoreFile();
         }
 
+        private bool SkipHealthBar(HealthBar healthBar)
+        {
+            if (healthBar == null) return true;
+            if (healthBar.Settings == null) return true;
+            if (!healthBar.Settings.Enable) return true;
+            if (!healthBar.Entity.IsAlive) return true;
+            if (healthBar.HpPercent < 0.001f) return true;
+            if (healthBar.Type == CreatureType.Minion && healthBar.HpPercent * 100 > Settings.ShowMinionOnlyBelowHp) return true;
+            if (healthBar.Entity.League == LeagueType.Legion && healthBar.Entity.IsHidden && healthBar.Entity.Rarity != MonsterRarity.Unique) return true;
+
+            return false;
+        }
+
         public void HpBarWork(HealthBar healthBar)
         {
-            if (healthBar.Life == null || healthBar.Settings == null || !healthBar.Settings.Enable)
-            {
-                healthBar.Skip = true;
-                return;
-            }
-
-            if (!healthBar.Entity.IsAlive)
-            {
-                healthBar.Skip = true;
-                return;
-            }
+            if (healthBar == null) return;
+            healthBar.Skip = SkipHealthBar(healthBar);
+            if (healthBar.Skip) return;
 
             var healthBarDistance = healthBar.Distance;
-
             if (healthBarDistance > Settings.LimitDrawDistance)
             {
                 healthBar.Skip = true;
                 return;
             }
 
-            healthBar.HpPercent = healthBar.Life.HPPercentage;
-
-            if (healthBar.HpPercent < 0.001f)
-            {
-                healthBar.Skip = true;
-                return;
-            }
-
-            if (healthBar.Type == CreatureType.Minion && healthBar.HpPercent * 100 > Settings.ShowMinionOnlyBelowHp)
-            {
-                healthBar.Skip = true;
-                return;
-            }
-
-            if (healthBar.Entity.League == LeagueType.Legion && healthBar.Entity.IsHidden && healthBar.Entity.Rarity != MonsterRarity.Unique)
-            {
-                healthBar.Skip = true;
-                return;
-            }
-
-            if (healthBar.Settings.ShowFloatingCombatDamage)
-            {
-                healthBar.DpsRefresh();
-            }
-            
-            var _ = healthBar.IsHostile;
             var worldCoords = healthBar.Entity.Pos;
             worldCoords.Z += Settings.GlobalZ;
             var mobScreenCoords = camera.WorldToScreen(worldCoords);
@@ -241,30 +275,26 @@ namespace HealthBars
         {
             CanTick = true;
 
-            if (ingameUICheckVisible?.Value ?? false)
+            if (ingameUICheckVisible.Value
+                || camera == null
+                || GameController.Area.CurrentArea.IsTown && !Settings.ShowInTown)
             {
                 CanTick = false;
                 return;
             }
 
-            if (camera == null)
-            {
-                CanTick = false;
-                return;
-            }
-
-            if (GameController.Area.CurrentArea.IsTown && !Settings.ShowInTown)
-            {
-                CanTick = false;
-                return;
-            }
-
-            foreach (var validEntity in GameController.EntityListWrapper.ValidEntitiesByType[EntityType.Monster])
+            var monster = GameController.EntityListWrapper.ValidEntitiesByType[EntityType.Monster];
+            foreach (var validEntity in monster)
             {
                 var healthBar = validEntity.GetHudComponent<HealthBar>();
-
-                if (healthBar != null)
+                try
+                {
                     HpBarWork(healthBar);
+                }
+                catch (Exception e)
+                {
+                    DebugWindow.LogError(e.Message);
+                }
             }
 
             foreach (var validEntity in GameController.EntityListWrapper.ValidEntitiesByType[EntityType.Player])
@@ -278,8 +308,7 @@ namespace HealthBars
 
         public override void Render()
         {
-            if (!CanTick)
-                return;
+            if (!CanTick) return;
 
             foreach (var entity in GameController.EntityListWrapper.ValidEntitiesByType[EntityType.Monster])
             {
@@ -326,7 +355,6 @@ namespace HealthBars
                 PlayerBar.BackGround = new RectangleF(result.X - scaledWidth / 2f, result.Y - scaledHeight / 2f, scaledWidth,
                     scaledHeight);
 
-                PlayerBar.HpPercent = PlayerBar.Life.HPPercentage;
                 PlayerBar.HpWidth = PlayerBar.HpPercent * scaledWidth;
                 PlayerBar.EsWidth = PlayerBar.Life.ESPercentage * scaledWidth;
                 DrawBar(PlayerBar);
@@ -352,71 +380,83 @@ namespace HealthBars
             bar.BackGround.Inflate(1, 1);
             Graphics.DrawFrame(bar.BackGround, bar.Settings.Outline, 1);
 
-            if (bar.Settings.ShowPercents)
-            {
-                Graphics.DrawText($"{Math.Floor(bar.HpPercent * 100).ToString(CultureInfo.InvariantCulture)}",
-                    new Vector2(bar.BackGround.Right, bar.BackGround.Center.Y - Graphics.Font.Size / 2f),
-                    bar.Settings.PercentTextColor);
-            }
-
-            if (bar.Settings.ShowHealthText)
-            {
-                var formattableString = $"{bar.Life.CurHP}/{bar.MaxHp}";
-
-                Graphics.DrawText(formattableString,
-                    new Vector2(bar.BackGround.Center.X, bar.BackGround.Center.Y - Graphics.Font.Size / 2f),
-                    bar.Settings.HealthTextColor, FontAlign.Center);
-            }
-
-            if (bar.Settings.ShowFloatingCombatDamage)
-            {
-                ShowDps(bar, new Vector2(bar.BackGround.Center.X, bar.BackGround.Y));
-            }
+            ShowPercents(bar);
+            ShowNumbersInHealthbar(bar);
         }
 
-        private void ShowDps(HealthBar healthBar, Vector2 point)
+        private void ShowNumbersInHealthbar(HealthBar bar)
         {
-            const int MARGIN_TOP = 2;
-            const int LAST_DAMAGE_ADD_SIZE = 7;
-            var fontSize = healthBar.Settings.FloatingCombatTextSize + LAST_DAMAGE_ADD_SIZE;
-            var textHeight = Graphics.MeasureText("100500", fontSize).Y;
+            if (!bar.Settings.ShowHealthText && !bar.Settings.ShowEnergyShieldText) return;
 
-            point.Y -= (textHeight + MARGIN_TOP);
-            int i = 0;
-            foreach (var dps in healthBar.DpsQueue)
+            string healthBarText = "";
+            if (bar.Settings.ShowEnergyShieldText && bar.Life.CurES > 0)
             {
-                i++;
-                var damageColor = healthBar.Settings.FloatingCombatDamageColor;
-                var sign = string.Empty;
-                if (dps > 0)
-                {
-                    damageColor = healthBar.Settings.FloatingCombatHealColor;
-                    sign = "+";
-                }
-
-                string dpsText = $"{sign}{dps}";
-                Graphics.DrawText(dpsText, point, Color.Black, fontSize, FontAlign.Center);
-                point.Y -= (Graphics.DrawText(dpsText, point, damageColor, fontSize, FontAlign.Center).Y + MARGIN_TOP);
-                if (i == 1)
-                {
-                    fontSize -= LAST_DAMAGE_ADD_SIZE;
-                }
+                healthBarText = $"{TextConversion(bar, bar.Life.CurES)}";
+                if (bar.Settings.ShowMaxEnergyShieldText)
+                    healthBarText += $"/{TextConversion(bar, bar.Life.MaxES)}";
+            } 
+            else if (bar.Settings.ShowHealthText)
+            {
+                healthBarText = $"{TextConversion(bar, bar.Life.CurHP)}";
+                if (bar.Settings.ShowMaxHealthText)
+                    healthBarText += $"/{TextConversion(bar, bar.Life.MaxHP)}";
             }
-            healthBar.DpsDequeue();
+
+            Graphics.DrawText(healthBarText,
+                new Vector2(bar.BackGround.Center.X, bar.BackGround.Center.Y - Graphics.Font.Size / 2f),
+                bar.Settings.HealthTextColor,
+                FontAlign.Center);
+        }
+
+        private void ShowPercents(HealthBar bar)
+        {
+            if (!bar.Settings.ShowHealthPercents && !bar.Settings.ShowEnergyShieldPercents) return;
+
+            float percents = 0;
+            if (bar.Settings.ShowHealthPercents)
+            {
+                percents = bar.Life.HPPercentage;
+            }
+            else if (bar.Settings.ShowEnergyShieldPercents)
+            {
+                percents = bar.Life.ESPercentage;
+            }
+
+            Graphics.DrawText(FloatToPercentString(percents),
+                new Vector2(bar.BackGround.Right, bar.BackGround.Center.Y - Graphics.Font.Size / 2f),
+                bar.Settings.PercentTextColor);
+        }
+        public static string TextConversion(HealthBar bar, decimal num)
+        {
+            if (bar.Settings.CondenseText)
+            {
+                if (num > 999999999) return num.ToString("0,,,.###B", CultureInfo.InvariantCulture);
+                if (num > 999999) return num.ToString("0,,.###M", CultureInfo.InvariantCulture);
+                if (num > 999) return num.ToString("0,.###K", CultureInfo.InvariantCulture);
+            }
+            else if (bar.Settings.ThousandsSeperators)
+            {
+                return num.ToString("#,###", CultureInfo.InvariantCulture);
+            }
+
+            return num.ToString("0.#", CultureInfo.InvariantCulture);
+        }
+
+        private string FloatToPercentString (float number)
+        {
+            return $"{Math.Floor(number * 100).ToString(CultureInfo.InvariantCulture)}";
         }
 
         public override void EntityAdded(Entity Entity)
         {
-            if (Entity.Type != EntityType.Monster && Entity.Type != EntityType.Player || Entity.Address == GameController.Player.Address ||
-                Entity.Type == EntityType.Daemon) return;
+            if (Entity.Type != EntityType.Monster && Entity.Type != EntityType.Player 
+                || Entity.Address == GameController.Player.Address 
+                || Entity.Type == EntityType.Daemon) return;
 
-            if (Entity.GetComponent<Life>() != null && !Entity.IsAlive) return;
+            if (Entity.HasComponent<Life>() && Entity.GetComponent<Life>() != null && !Entity.IsAlive) return;
             if (IgnoredSum.Any(x => Entity.Path.StartsWith(x))) return;
+            if (Entity.Path.StartsWith("Metadata/Monsters/AtlasExiles/BasiliskInfluenceMonsters/BasiliskBurrowingViper") && (Entity.Rarity != MonsterRarity.Unique)) return;
             Entity.SetHudComponent(new HealthBar(Entity, Settings));
-        }
-
-        public override void EntityRemoved(Entity Entity)
-        {
         }
     }
 }
